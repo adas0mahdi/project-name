@@ -1,5 +1,5 @@
 <script setup>
-const page = ref('home')
+const page = ref('')
 
 function view(name) {
   page.value = name;
@@ -23,7 +23,7 @@ function view(name) {
   margin-bottom: 30px;
   align-items: center;
   ">
-<HomeWelcome v-if="page ==='home'"/>
-<Counter v-if="page === 'counter'"/>
+<LazyHomeWelcome v-if="page ==='home'"/>
+<LazyCounter v-if="page === 'counter'"/>
   </div>
 </template>
